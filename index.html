@@ -4,12 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>记录我写的第一个网站</title>
-    <style>  
-      body {
-	min-width:800px;
+    <style> 
+      @media (min-width:0px) and (max-width:768px){
+        body {
+        margin: 10px;
+        background:#dceef0;
+        }
+      } 
+      @media (min-width:768px){
+        body {
+        min-width:800px;
         zoom: 1.25;
         margin: 10px;
         background:#dceef0;
+        }
       }
       .color_1{
         background:#81ada0;
@@ -19,6 +27,9 @@
       }
       .box_1{
         text-align:center;
+        border-radius: 40px;
+        margin: 30px auto;
+        max-width: 1300px;
         padding:20px;
         color:#342c3b;
         font-family: 汉仪书魂体简;
