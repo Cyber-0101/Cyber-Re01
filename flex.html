@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zn_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局</title>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+            background-color: #eee;
+        }
+        /* *{
+            border:1px solid black;
+        } */
+        .flex{
+            display: flex;
+        }
+        .whilt{
+            background-color: white;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .flex1{
+            flex:1;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .mg8{
+            margin: 8px;
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .nav{
+            padding: 10px 20px;
+            border-bottom: 1px solid grey;
+            font-size: 16px;
+            color: #666;
+        }
+        @media (max-width:768px){
+           .sidebar{
+                display: none;
+           } 
+           .column_1{
+            flex-direction: column;
+           }
+           .r{
+            margin-left: 8px;
+           }
+           .date{
+            margin: 0 0 8px;
+            flex:auto;
+           }
+        }
+        .scro::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+</head>
+<body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px;z-index: 1;" class="sidebar whilt">
+        <!-- 头像 -->
+        <div style="padding: 20px;
+        text-align:center;
+        border-bottom:1px solid #999;">头像</div>
+        <!-- 导航 -->
+        <div class="flex1">
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+            <div class="nav">导航</div>
+        </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+        <!-- 头部栏 -->
+        <div style="height:60px;z-index: 1;" class="whilt"></div>
+        <!-- 内容区 -->
+        <div style="overflow:auto" class="scro column_1 flex1 flex">
+            <!-- 左 -->
+            <div style="flex:3" class="flex column mg8">
+                <!-- 数据 -->
+                <div class="column_1 flex">
+                    <div style="height:100px" class="date flex1 whilt mgr8"></div>
+                    <div style="height:100px" class="date flex1 whilt mgr8"></div>
+                    <div style="height:100px" class="date flex1 whilt mgr8"></div>
+                    <div style="height:100px" class="date flex1 whilt"></div>
+                </div>
+                <!-- 列表 -->
+                <div class="flex column">
+                    <div style="height:160px" class="whilt mgt8"></div>
+                    <div style="height:160px" class="whilt mgt8"></div>
+                    <div style="height:160px" class="whilt mgt8"></div>
+                    <div style="height:160px" class="whilt mgt8"></div>
+                    <div style="height:160px" class="whilt mgt8"></div>
+                    <div style="height:160px" class="whilt mgt8"></div>
+                </div>
+            </div>
+            <!-- 右 -->
+            <div style="flex:1" class="r flex column mgt8">
+                <!-- 提示 -->
+                <div style="height:150px" class="whilt"></div>
+                <!-- 消息 -->
+                <div style="height:300px" class="whilt mgt8"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
