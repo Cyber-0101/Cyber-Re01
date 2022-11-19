@@ -1,0 +1,83 @@
+@font-face{
+    font-family: 'far';
+    src: url(../font/fa-solid.woff2);
+}
+@media (max-width:767px){ /*移动端*/
+    body{
+        background-image: url(../../images/starry\ sky_m.jpg);
+    }
+    .div1{
+        min-height: 500px;
+        min-width: 300px;
+    }
+    .div2{
+        padding: 10px 100px;
+    }
+    .div3{
+        padding: 10px 30px;
+    }    
+}
+@media (min-width:768px){ /*PC端*/
+    body{
+        background-image: url(../../images/starry\ sky.jpg);
+    }
+    .div1{
+        min-height: 750px;
+        min-width: 450px;
+    }
+    .div2{
+        padding: 15px 150px;
+    }
+    .div3{
+        padding: 15px 45px;
+    }    
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+}
+.a_c{
+    align-items: center;   
+}
+.j_sa{
+    justify-content: space-around;
+}
+.j_c{
+    justify-content: center;
+}
+.column{
+    flex-direction: column;
+}
+.mr_1{
+    margin: 40px;
+}.mr_2{
+    margin: 10px;
+}
+.bor_r1{
+    border-radius: 20px;
+}
+.bor_r2{
+    border-radius: 100px;
+}
+.bor_s{
+    border: solid rgba(255, 255, 255, 0.5) 1px;
+}
+
+.div1{
+    position: relative;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(5px);   
+    transform-style: preserve-3d;
+}
+
+

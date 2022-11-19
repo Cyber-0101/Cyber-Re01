@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .box{
+            height: 50vh;
+            width: 50vh;
+            background: rgb(185, 184, 184);
+            margin: 25vh auto;
+            text-align: center;
+            line-height: 50vh;
+            border-radius: 30px;
+            transform-style: preserve-3d;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>3D盒子</h1>
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+        document.addEventListener('mousemove', function (e) {
+            let oX = window.innerWidth/2;
+            let oY = window.innerHeight/2;
+            let X = (e.clientY-oY)/oY*30;
+            let Y = (e.clientX-oX)/oX*30*(-1);
+            let O = 'rotateX('+X+'deg) rotateY('+Y+'deg)';
+            box.style.transform = O         
+        });
+    </script>
+</div>
+
+
+</body>
+</html>
